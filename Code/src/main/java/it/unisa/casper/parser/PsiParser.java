@@ -104,18 +104,19 @@ public class PsiParser implements Parser {
 
             return projectPackages;
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ParsingException();
         }
     }
 
     private void methosAnalysis(HashMap<String, Double> coseno, HashMap<String, Integer> dipendence, MethodBean methodBean) {
 
-        //ANALISI STORICA
+        /*//ANALISI STORICA
         //feature envy
 
         HistoryFeatureEnvyStrategy historyFeatureEnvyStrategy = new HistoryFeatureEnvyStrategy(projectPackages);
         FeatureEnvyCodeSmell hFeatureEnvyCodeSmell = new FeatureEnvyCodeSmell(historyFeatureEnvyStrategy, "History");
-        methodBean.isAffected(hFeatureEnvyCodeSmell);
+        methodBean.isAffected(hFeatureEnvyCodeSmell);*/
 
 
         TextualFeatureEnvyStrategy textualFeatureEnvyStrategy = new TextualFeatureEnvyStrategy(projectPackages, coseno.get("cosenoFeature"));
@@ -129,7 +130,7 @@ public class PsiParser implements Parser {
     }
 
     private void classAnalysis(HashMap<String, Double> coseno, HashMap<String, Integer> dipendence, ClassBean classBean) {
-        //ANALISI STORICA
+        /*//ANALISI STORICA
         //blob
        HistoryBlobStrategy historyBlobStrategy = new HistoryBlobStrategy();
         BlobCodeSmell hBlobCodeSmell = new BlobCodeSmell(historyBlobStrategy, "History");
@@ -155,7 +156,7 @@ public class PsiParser implements Parser {
         //Parallel Inheritance
         HistoryParallelInheritanceStrategy historyParallelInheritanceStrategy = new HistoryParallelInheritanceStrategy(projectPackages);
         ParallelInheritanceCodeSmell parallelInheritanceCodeSmell = new ParallelInheritanceCodeSmell(historyParallelInheritanceStrategy, "History");
-        classBean.isAffected(parallelInheritanceCodeSmell);
+        classBean.isAffected(parallelInheritanceCodeSmell);*/
 
 
         TextualBlobStrategy textualBlobStrategy = new TextualBlobStrategy(coseno.get("cosenoBlob"));
@@ -445,7 +446,7 @@ public class PsiParser implements Parser {
             if (elementFound instanceof PsiMethod) {
                 PsiMethod method = (PsiMethod) elementFound;
                 qualifiedName = method.getContainingClass().getQualifiedName();
-                if (!qualifiedName.contains("java.util.") && !qualifiedName.contains("java.lang.") && !qualifiedName.contains("java.io.")) {
+                if (qualifiedName!= null && !qualifiedName.contains("java.util.") && !qualifiedName.contains("java.lang.") && !qualifiedName.contains("java.io.")) {
 
                     bean = new MethodBean.Builder(qualifiedName + "." + method.getName(), "").build();
                     if (!invocations.contains(bean)) {

@@ -39,11 +39,11 @@ public class SystemStart {
         File dir = new File(nameDir);
         dir.mkdir();
 
-        //crea i file .py per la detection dei code smell con analisi storica
+        /*//crea i file .py per la detection dei code smell con analisi storica
         HistoryAnalysisStartup startup = new HistoryAnalysisStartup(nameDir);
         startup.writeScripts();
         //crea singleton per il path di python.exe
-        PythonExeSingleton singleton = PythonExeSingleton.getIstance(nameDir);
+        PythonExeSingleton singleton = PythonExeSingleton.getIstance(nameDir);*/
 
         try {
             FileReader f = new FileReader(nameDir + File.separator + "threshold.txt");
@@ -119,7 +119,7 @@ public class SystemStart {
                     packageList[0] = parser.parse();
                 } catch (ParsingException e) {
                     errorHappened = true;
-
+                    e.printStackTrace();
                 }
             });
 

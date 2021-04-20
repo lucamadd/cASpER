@@ -667,29 +667,29 @@ public class CheckProjectPage extends DialogWrapper {
             }
         }
 
-        if(divergentChangeList.size() != 0){
-            if(codeSmell.get("Divergent Change").isSelected()){
-                for (ClassBean c : divergentChangeList){
-                    gestione(c.getAffectedSmell(), "Divergent Change", c.getFullQualifiedName());
-                }
-            }
-        }
+//        if(divergentChangeList.size() != 0){
+//            if(codeSmell.get("Divergent Change").isSelected()){
+//                for (ClassBean c : divergentChangeList){
+//                    gestione(c.getAffectedSmell(), "Divergent Change", c.getFullQualifiedName());
+//                }
+//            }
+//        }
 
-        if(shotgunSurgeryList.size() != 0){
-            if(codeSmell.get("Shotgun Surgery").isSelected()){
-                for (ClassBean c : shotgunSurgeryList){
-                    gestione(c.getAffectedSmell(), "Shotgun Surgery", c.getFullQualifiedName());
-                }
-            }
-        }
+//        if(shotgunSurgeryList.size() != 0){
+//            if(codeSmell.get("Shotgun Surgery").isSelected()){
+//                for (ClassBean c : shotgunSurgeryList){
+//                    gestione(c.getAffectedSmell(), "Shotgun Surgery", c.getFullQualifiedName());
+//                }
+//            }
+//        }
 
-        if(parallelInheritanceList.size() != 0){
-            if(codeSmell.get("Parallel Inheritance").isSelected()){
-                for(ClassBean c : parallelInheritanceList){
-                    gestione(c.getAffectedSmell(), "Parallel Inheritance", c.getFullQualifiedName());
-                }
-            }
-        }
+//        if(parallelInheritanceList.size() != 0){
+//            if(codeSmell.get("Parallel Inheritance").isSelected()){
+//                for(ClassBean c : parallelInheritanceList){
+//                    gestione(c.getAffectedSmell(), "Parallel Inheritance", c.getFullQualifiedName());
+//                }
+//            }
+//        }
 
         if (misplacedClassList.size() != 0) {
             if (codeSmell.get("Misplaced Class").isSelected()) {
@@ -843,7 +843,7 @@ public class CheckProjectPage extends DialogWrapper {
                         if (dip == 0) {
                             if (smell.getSmellName().equalsIgnoreCase("Blob") && algoritmi.get("structural" + codeSmell.substring(0, 1)).isSelected() && alto > 0) {
                                 HashMap<String, Double> soglie = smell.getIndex();
-                                tableItem.add(df2.format(soglie.get("LCOM")) + "-" + df2.format(soglie.get("featureSum")) + "-" + df2.format(soglie.get("ELOC")));
+                                tableItem.add(soglie.get("LCOM") + "-" + soglie.get("featureSum") + "-" + soglie.get("ELOC"));
                             } else {
                                 if (smell.getSmellName().equalsIgnoreCase("Promiscuous package") && algoritmi.get("structural" + codeSmell.substring(0, 1)).isSelected() && alto > 0) {
                                     HashMap<String, Double> soglie = smell.getIndex();
