@@ -6,6 +6,8 @@ import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.table.JBTable;
 import it.unisa.casper.analysis.code_smell.CodeSmell;
 import it.unisa.casper.analysis.history_analysis_utility.HistoryAnalysisStartup;
+import it.unisa.casper.statistics.GlobalTimer;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.MethodBean;
 import it.unisa.casper.storage.beans.PackageBean;
@@ -81,6 +83,8 @@ public class CheckProjectPage extends DialogWrapper {
     private double sogliaCoseno;
     private ArrayList<Integer> sogliaDipendenze;
 
+    private GlobalTimer viewTime;
+
     public CheckProjectPage(Project currentProj, List<PackageBean> packages, double sogliaCoseno, ArrayList<Integer> sogliaDipendenze, String algorithm) {
         super(true);
         smellName = new ArrayList<String>();
@@ -108,6 +112,8 @@ public class CheckProjectPage extends DialogWrapper {
         divergentChangeList = new ArrayList<ClassBean>();
         parallelInheritanceList = new ArrayList<ClassBean>();
         shotgunSurgeryList = new ArrayList<ClassBean>();
+
+        viewTime = new GlobalTimer();
 
         this.currentProject = currentProj;
         this.packages = packages;
@@ -640,8 +646,14 @@ public class CheckProjectPage extends DialogWrapper {
                 }
             }
         };
-
-        return new Action[]{okAction, new DialogWrapperExitAction("EXIT", 0)};
+        return new Action[]{okAction, new DialogWrapperExitAction("EXIT", 0){
+            @Override
+            protected void doAction(ActionEvent e) {
+                viewTime.stopTimer();
+                StatsCollection.getInstance().saveAll();
+                super.doAction(e);
+            }
+        }};
     }
 
     //crea la tabella in basso a sinistra
