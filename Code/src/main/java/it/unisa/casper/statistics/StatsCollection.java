@@ -11,7 +11,8 @@ public class StatsCollection {
 
     //Singleton pattern
     private static StatsCollection instance = null;
-    private long globalTimer;
+    private long viewTime;
+    private long executionTime;
 
 
     private StatsCollection() {}
@@ -23,8 +24,12 @@ public class StatsCollection {
         return instance;
     }
 
-    public void setGlobalTimer(long globalTimer) {
-        this.globalTimer = globalTimer;
+    public void setViewTime(long viewTime) {
+        this.viewTime = viewTime;
+    }
+
+    public void setExecutionTime(long executionTime) {
+        this.executionTime = executionTime;
     }
 
 
@@ -43,7 +48,10 @@ public class StatsCollection {
         try {
             FileWriter f = new FileWriter(nameDir + File.separator + fileName + ".txt");
             BufferedWriter out = new BufferedWriter(f);
-            out.write("viewTime=" + globalTimer);
+            out.write("viewTime=" + viewTime);
+            out.flush();
+            out.newLine();
+            out.write("executionTime=" + executionTime);
             out.flush();
             out.newLine();
         } catch (Exception ex) {

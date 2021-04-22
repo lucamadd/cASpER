@@ -2,22 +2,37 @@ package it.unisa.casper.statistics;
 
 public class GlobalTimer {
 
-    private long globalStart;
-    private long globalEnd;
+    private long viewTimeStart;
+    private long viewTimeEnd;
+
+    private long executionTimeStart;
+    private long executionTimeEnd;
 
     public GlobalTimer(){
-        globalStart = System.currentTimeMillis();
+        startViewTimer();
+        startExecutionTimer();
     }
 
-    public void setGlobalStart(long globalStart) {
-        this.globalStart = globalStart;
+    public void startViewTimer(){
+        viewTimeStart = System.currentTimeMillis();
     }
 
-    public void stopTimer(){
-        globalEnd = System.currentTimeMillis();
-        long globalTimer =  globalEnd - globalStart;
+    public void stopViewTimer(){
+        viewTimeEnd = System.currentTimeMillis();
+        long viewTimeElapsed =  viewTimeEnd - viewTimeStart;
         StatsCollection stats = StatsCollection.getInstance();
-        stats.setGlobalTimer(globalTimer);
+        stats.setViewTime(viewTimeElapsed);
+    }
+
+    public void startExecutionTimer(){
+        executionTimeStart = System.currentTimeMillis();
+    }
+
+    public void stopExecutionTimer(){
+        executionTimeEnd = System.currentTimeMillis();
+        long executionTimeElapsed =  executionTimeEnd - executionTimeStart;
+        StatsCollection stats = StatsCollection.getInstance();
+        stats.setExecutionTime(executionTimeElapsed);
     }
 
 }
