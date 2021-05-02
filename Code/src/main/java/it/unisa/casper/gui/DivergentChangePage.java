@@ -7,6 +7,7 @@ import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.exceptions.RefactorException;
 import it.unisa.casper.refactor.splitting_algorithm.SplitClasses;
+import it.unisa.casper.statistics.StatsCollection;
 import org.jetbrains.annotations.NotNull;
 import src.main.java.it.unisa.casper.gui.StyleText;
 import com.intellij.openapi.project.Project;
@@ -32,7 +33,6 @@ public class DivergentChangePage  extends DialogWrapper {
     private boolean errorOccured;
     private RadarMapUtils radars;
     private JPanel radarmaps;
-
 
     protected DivergentChangePage(ClassBean divergentChangeClass, @Nullable Project project) {
         super(project, true);
@@ -115,6 +115,9 @@ public class DivergentChangePage  extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
+
                 message = "Something went wrong in computing solution";
                 ProgressManager.getInstance().runProcessWithProgressSynchronously(() -> {
                     try {
@@ -125,6 +128,7 @@ public class DivergentChangePage  extends DialogWrapper {
                 }, "Divergent Change", false, project);
 
                 if (errorOccured) {
+                    StatsCollection.getInstance().addErrorDivergentChangePage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
                         DivergentChangeWizard divergentChangeWizard = new DivergentChangeWizard(divergentChangeClass, splittedClasses, project);

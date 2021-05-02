@@ -9,6 +9,7 @@ import com.intellij.ui.table.JBTable;
 import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.splitting_algorithm.SplitClasses;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.structuralMetrics.CKMetrics;
 import org.jetbrains.annotations.NotNull;
@@ -151,6 +152,8 @@ public class BlobPage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
 
                 message = "Something went wrong in computing solution";
                 ProgressManager.getInstance().runProcessWithProgressSynchronously(() -> {
@@ -167,6 +170,7 @@ public class BlobPage extends DialogWrapper {
                 }, "Blob", false, project);
 
                 if (errorOccured) {
+                    StatsCollection.getInstance().addErrorBlobPage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
                     if (splittedClasses.size() < 2) {

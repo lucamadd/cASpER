@@ -1,5 +1,6 @@
 package it.unisa.casper.gui;
 
+import com.google.common.math.Stats;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
@@ -647,7 +648,15 @@ public class CheckProjectPage extends DialogWrapper {
                 }
             }
         };
-        return new Action[]{okAction, new DialogWrapperExitAction("EXIT", 0){
+        Action extractAction = new DialogWrapperAction("STATISTICS") {
+
+            @Override
+            protected void doAction(ActionEvent actionEvent) {
+                ConfirmExtractionPage confirmExtractionPage = new ConfirmExtractionPage();
+                confirmExtractionPage.show();
+            }
+        };
+        return new Action[]{extractAction, okAction, new DialogWrapperExitAction("EXIT", 0){
             @Override
             protected void doAction(ActionEvent e) {
                 timer.stopViewTimer();
@@ -671,7 +680,7 @@ public class CheckProjectPage extends DialogWrapper {
 
         columnNames.add("priority");
         model = new DefaultTableModel(columnNames, 0);
-
+        addListToStats();
         if (blobList.size() != 0) {
             if (codeSmell.get("Blob").isSelected()) {
                 for (ClassBean c : blobList) {
@@ -738,6 +747,19 @@ public class CheckProjectPage extends DialogWrapper {
         this.table.setModel(model);
         table.setDefaultEditor(Object.class, null);
 
+    }
+
+    //aggiunge il numero di smell trovati alle statistiche
+    private void addListToStats() {
+        StatsCollection statsCollection = StatsCollection.getInstance();
+
+        statsCollection.setBlobSmellNum(blobList.size());
+        statsCollection.setMisplacedClassSmellNum(misplacedClassList.size());
+        statsCollection.setDivergentChangeSmellNum(divergentChangeList.size());
+        statsCollection.setShotgunSurgerySmellNum(shotgunSurgeryList.size());
+        statsCollection.setParallelInheritanceSmellNum(parallelInheritanceList.size());
+        statsCollection.setPromiscuousPackageSmellNum(promiscuousPackageList.size());
+        statsCollection.setFeatureEnvySmellNum(featureEnvyList.size());
     }
 
     private void gestione(List<CodeSmell> list, String codeSmell, String bean) {

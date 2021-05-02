@@ -9,6 +9,7 @@ import com.intellij.ui.table.JBTable;
 import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.splitting_algorithm.SplitPackages;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.PackageBean;
 import it.unisa.casper.structuralMetrics.CKMetrics;
 import org.jetbrains.annotations.NotNull;
@@ -142,6 +143,8 @@ public class PromiscuousPackagePage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
 
                 //Messages.showMessageDialog("Promiscuous Package Refactoring coming soon", "Attention !", Messages.getInformationIcon());
                 message = "Something went wrong in computing solution";
@@ -154,6 +157,7 @@ public class PromiscuousPackagePage extends DialogWrapper {
                 }, "Promiscuous package", false, project);
 
                 if (errorOccured) {
+                    StatsCollection.getInstance().addErrorPromiscuousPackage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
                     if (splittedPackages.size() < 2) {

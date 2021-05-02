@@ -6,6 +6,7 @@ import com.intellij.ui.table.JBTable;
 import com.intellij.util.ui.JBUI;
 import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.structuralMetrics.CKMetrics;
 import org.jetbrains.annotations.NotNull;
@@ -143,6 +144,8 @@ public class MisplacedClassPage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
                 MisplacedClassWizard misplacedClassWizard = new MisplacedClassWizard(misplacedClassBean, project);
                 misplacedClassWizard.show();
                 close(0);

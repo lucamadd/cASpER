@@ -2,6 +2,7 @@ package it.unisa.casper.gui;
 
 import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
+import it.unisa.casper.statistics.StatsCollection;
 import org.jetbrains.annotations.NotNull;
 import src.main.java.it.unisa.casper.gui.StyleText;
 import com.intellij.openapi.project.Project;
@@ -116,6 +117,9 @@ public class ShotgunSurgeryPage  extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
+
                 ShothunSurgeryWizard shothunSurgeryWizard = new ShothunSurgeryWizard(shotgunSurgeryClass, project);
                 shothunSurgeryWizard.show();
                 close(0);
