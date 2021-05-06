@@ -81,9 +81,11 @@ public class StatsCollection {
             out.write("noSolutionBlobPage=" + errorBlobPage);
             out.flush();
             out.newLine();
+            /* //DIVERGENT CHANGE NOT INCLUDED IN FIRST 4 SMELLS
             out.write("noSolutionDivergentChangePage=" + errorDivergentChangePage);
             out.flush();
             out.newLine();
+             */
             //scrivo su file se l'utente ha effettuato refactoring dopo l'analisi
             if (refactoring){
                 out.write("refactoring=" + 1);
@@ -101,15 +103,21 @@ public class StatsCollection {
             out.write("misplacedClassSmellNum=" + misplacedClassSmellNum);
             out.flush();
             out.newLine();
+            /*  //DIVERGENT CHANGE NOT INCLUDED IN FIRST 4 SMELLS
             out.write("divergentChangeSmellNum=" + divergentChangeSmellNum);
             out.flush();
             out.newLine();
+             */
+            /*  //SHOTGUN SURGERY NOT INCLUDED IN FIRST 4 SMELLS
             out.write("shotgunSurgerySmellNum=" + shotgunSurgerySmellNum);
             out.flush();
             out.newLine();
+             */
+            /*  //PARALLEL INHERITANCE NOT INCLUDED IN FIRST 4 SMELLS
             out.write("parallelInheritanceSmellNum=" + parallelInheritanceSmellNum);
             out.flush();
             out.newLine();
+             */
             out.write("promiscuousPackageSmellNum=" + promiscuousPackageSmellNum);
             out.flush();
             out.newLine();
