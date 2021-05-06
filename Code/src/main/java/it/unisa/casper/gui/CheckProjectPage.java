@@ -754,7 +754,6 @@ public class CheckProjectPage extends DialogWrapper {
     //aggiunge il numero di smell trovati alle statistiche
     private void addListToStats() {
         StatsCollection statsCollection = StatsCollection.getInstance();
-
         statsCollection.setBlobSmellNum(blobList.size());
         statsCollection.setMisplacedClassSmellNum(misplacedClassList.size());
         statsCollection.setDivergentChangeSmellNum(divergentChangeList.size());
