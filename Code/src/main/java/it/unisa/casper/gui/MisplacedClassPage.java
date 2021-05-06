@@ -144,8 +144,7 @@ public class MisplacedClassPage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
+
                 MisplacedClassWizard misplacedClassWizard = new MisplacedClassWizard(misplacedClassBean, project);
                 misplacedClassWizard.show();
                 close(0);

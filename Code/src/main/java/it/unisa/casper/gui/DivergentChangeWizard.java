@@ -9,6 +9,7 @@ import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.manipulator.DivergentChangeRefactoringStrategy;
 import it.unisa.casper.refactor.manipulator.ShotgunSurgeryRefactoringStrategy;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -114,6 +115,8 @@ public class DivergentChangeWizard extends DialogWrapper {
                 // WriteCommandAction.runWriteCommandAction(project, () -> {
                     try {
                         refactoringManager.executeRefactor();
+                        //imposto a true la variabile refactoring
+                        StatsCollection.getInstance().doRefactoring();
                     } catch (Exception e) {
                         errorOccurred = true;
                         message = "Error during refactoring";

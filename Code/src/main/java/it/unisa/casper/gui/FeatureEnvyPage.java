@@ -6,9 +6,6 @@ import com.intellij.ui.table.JBTable;
 import com.intellij.util.ui.JBUI;
 import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
-import it.unisa.casper.refactor.manipulator.UpdateClassUtility;
-import it.unisa.casper.statistics.StatsCollection;
-import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.MethodBean;
 import it.unisa.casper.storage.beans.PackageBean;
 import it.unisa.casper.structuralMetrics.CKMetrics;
@@ -146,8 +143,6 @@ public class FeatureEnvyPage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
                 FeatureEnvyWizard featureEnvyWizard = new FeatureEnvyWizard(featureEnvyBean, project, packageBeans);
                 featureEnvyWizard.show();
                 close(0);

@@ -8,7 +8,6 @@ import it.unisa.casper.refactor.manipulator.FieldMover;
 import it.unisa.casper.refactor.manipulator.ParallelInheritanceStrategy;
 import it.unisa.casper.refactor.manipulator.UpdateClassUtility;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
-import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -108,8 +107,7 @@ public class ParallelInheritancePage  extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
+
                 ParallelInheritanceWizard parallelInheritanceWizard = new ParallelInheritanceWizard(superClass1, superClass2, project, packageBeans);
                 parallelInheritanceWizard.show();
                 close(0);

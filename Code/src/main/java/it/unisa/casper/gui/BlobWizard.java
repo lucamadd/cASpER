@@ -9,6 +9,7 @@ import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.manipulator.BlobRefatoringStrategy;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
 import it.unisa.casper.refactor.strategy.RefactoringStrategy;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.InstanceVariableBean;
 import it.unisa.casper.storage.beans.MethodBean;
@@ -69,6 +70,8 @@ public class BlobWizard extends DialogWrapper {
                     RefactoringStrategy refactoringStrategy = new BlobRefatoringStrategy(blobClassBean, splitting, project);
                     RefactoringManager refactoringManager = new RefactoringManager(refactoringStrategy);
                     refactoringManager.executeRefactor();
+                    //imposto a true la variabile refactoring
+                    StatsCollection.getInstance().doRefactoring();
 
                     message = "Blob Corrected, check new classes generated name";
                     Messages.showMessageDialog(message, "Success !", Messages.getInformationIcon());

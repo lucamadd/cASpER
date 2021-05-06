@@ -143,8 +143,7 @@ public class PromiscuousPackagePage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
+
 
                 //Messages.showMessageDialog("Promiscuous Package Refactoring coming soon", "Attention !", Messages.getInformationIcon());
                 message = "Something went wrong in computing solution";

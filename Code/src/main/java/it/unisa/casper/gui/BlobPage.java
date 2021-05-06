@@ -152,8 +152,7 @@ public class BlobPage extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
+
 
                 message = "Something went wrong in computing solution";
                 ProgressManager.getInstance().runProcessWithProgressSynchronously(() -> {

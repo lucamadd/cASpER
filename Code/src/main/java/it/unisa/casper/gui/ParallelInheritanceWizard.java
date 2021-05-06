@@ -10,6 +10,7 @@ import it.unisa.casper.refactor.manipulator.ParallelInheritanceStrategy;
 import it.unisa.casper.refactor.manipulator.ShotgunSurgeryRefactoringStrategy;
 import it.unisa.casper.refactor.manipulator.UpdateClassUtility;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.InstanceVariableBean;
 import it.unisa.casper.storage.beans.MethodBean;
@@ -175,7 +176,10 @@ public class ParallelInheritanceWizard  extends DialogWrapper {
 
                 UpdateClassUtility.deleteClassFile(super2);
 
+                //ragazzi vi siete dimenticati di rimuovere questo
                 System.out.println("BOH");
+                //imposto a true la variabile refactoring
+                StatsCollection.getInstance().doRefactoring();
 
                 if (errorOccurred) {
                     icon = Messages.getErrorIcon();

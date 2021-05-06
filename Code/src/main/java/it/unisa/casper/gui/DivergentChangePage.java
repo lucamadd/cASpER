@@ -115,9 +115,6 @@ public class DivergentChangePage  extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
-
                 message = "Something went wrong in computing solution";
                 ProgressManager.getInstance().runProcessWithProgressSynchronously(() -> {
                     try {
@@ -128,7 +125,7 @@ public class DivergentChangePage  extends DialogWrapper {
                 }, "Divergent Change", false, project);
 
                 if (errorOccured) {
-                    StatsCollection.getInstance().addErrorDivergentChangePage();
+                    //StatsCollection.getInstance().addErrorDivergentChangePage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
                         DivergentChangeWizard divergentChangeWizard = new DivergentChangeWizard(divergentChangeClass, splittedClasses, project);

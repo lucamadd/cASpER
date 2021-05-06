@@ -8,6 +8,7 @@ import it.unisa.casper.gui.radarMap.RadarMapUtils;
 import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.manipulator.MisplacedClassRefactoringStrategy;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.PackageBean;
 import it.unisa.casper.topic.TopicExtracter;
@@ -184,6 +185,8 @@ public class MisplacedClassWizard extends DialogWrapper {
 
                 try {
                     manager.executeRefactor();
+                    //imposto a true la variabile refactoring
+                    StatsCollection.getInstance().doRefactoring();
                 } catch (Exception e) {
                     errorOccurred = true;
                     message = e.getMessage();

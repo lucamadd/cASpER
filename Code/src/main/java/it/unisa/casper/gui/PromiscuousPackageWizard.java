@@ -9,6 +9,7 @@ import it.unisa.casper.gui.radarMap.RadarMapUtilsAdapter;
 import it.unisa.casper.refactor.manipulator.PromiscuousPackageRefactoringStrategy;
 import it.unisa.casper.refactor.strategy.RefactoringManager;
 import it.unisa.casper.refactor.strategy.RefactoringStrategy;
+import it.unisa.casper.statistics.StatsCollection;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.InstanceVariableBean;
 import it.unisa.casper.storage.beans.MethodBean;
@@ -71,6 +72,10 @@ public class PromiscuousPackageWizard extends DialogWrapper {
                     RefactoringStrategy refactoringStrategy = new PromiscuousPackageRefactoringStrategy(promiscuousPackageBean, splitting, project);
                     RefactoringManager refactoringManager = new RefactoringManager(refactoringStrategy);
                     refactoringManager.executeRefactor();
+
+                    //imposto a true la variabile refactoring
+                    StatsCollection.getInstance().doRefactoring();
+
                     message = "Promiscuous Package Corrected, check new classes generated name and control the import";
                     Messages.showMessageDialog(message, "Success !", Messages.getInformationIcon());
                     FileWriter f = new FileWriter(System.getProperty("user.home") + File.separator + ".casper" + File.separator + "refactoring.txt");

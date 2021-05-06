@@ -117,8 +117,7 @@ public class ShotgunSurgeryPage  extends DialogWrapper {
 
             @Override
             protected void doAction(ActionEvent actionEvent) {
-                //imposto a true la variabile refactoring
-                StatsCollection.getInstance().doRefactoring();
+
 
                 ShothunSurgeryWizard shothunSurgeryWizard = new ShothunSurgeryWizard(shotgunSurgeryClass, project);
                 shothunSurgeryWizard.show();
