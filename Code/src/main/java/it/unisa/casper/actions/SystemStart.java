@@ -10,6 +10,7 @@ import it.unisa.casper.analysis.history_analysis_utility.PythonExeSingleton;
 import it.unisa.casper.gui.CheckProjectPage;
 import it.unisa.casper.parser.ParsingException;
 import it.unisa.casper.parser.PsiParser;
+import it.unisa.casper.statistics.GlobalTimer;
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.MethodBean;
 import it.unisa.casper.storage.beans.PackageBean;
@@ -25,9 +26,10 @@ public class SystemStart {
     private static ArrayList<String> smell;
     private double minC = 0.5;
     private ArrayList<Integer> sogliaStructural;
+    private GlobalTimer executionTimer;
 
     public SystemStart() {
-
+        executionTimer = new GlobalTimer();
         smell = new ArrayList<String>();
         smell.add("Feature");
         smell.add("Misplaced");
@@ -127,7 +129,7 @@ public class SystemStart {
 
         if (!errorHappened) {
 
-            CheckProjectPage frame = new CheckProjectPage(currentProject, packageList[0], minC, sogliaStructural, algoritmo);
+            CheckProjectPage frame = new CheckProjectPage(currentProject, packageList[0], minC, sogliaStructural, algoritmo, executionTimer);
             frame.show();
 
         } else {

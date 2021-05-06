@@ -34,9 +34,15 @@ public class StatsExtracter {
 
         // aggiungo gli header al csv
         String[] header = { "fileName","viewTime", "executionTime", "noSolutionPromiscuousPackage",
+                "noSolutionBlobPage", "refactoring", "blobSmellNum", "misplacedClassSmellNum",
+                "promiscuousPackageSmellNum", "featureEnvySmellNum"};
+
+        /*  //questi header contengono anche i 3 smell aggiuntivi
+        String[] header = { "fileName","viewTime", "executionTime", "noSolutionPromiscuousPackage",
                 "noSolutionBlobPage", "noSolutionDivergentChangePage", "refactoring", "blobSmellNum",
                 "misplacedClassSmellNum", "divergentChangeSmellNum", "shotgunSurgerySmellNum",
                 "parallelInheritanceSmellNum", "promiscuousPackageSmellNum", "featureEnvySmellNum"};
+         */
         writer.writeNext(header);
 
         // leggo tutti i file .txt nella cartella

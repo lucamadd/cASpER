@@ -84,11 +84,13 @@ public class CheckProjectPage extends DialogWrapper {
     private double sogliaCoseno;
     private ArrayList<Integer> sogliaDipendenze;
 
-    private GlobalTimer timer;
+    private GlobalTimer executionTime;
+    private GlobalTimer viewTime;
 
-    public CheckProjectPage(Project currentProj, List<PackageBean> packages, double sogliaCoseno, ArrayList<Integer> sogliaDipendenze, String algorithm) {
+    public CheckProjectPage(Project currentProj, List<PackageBean> packages, double sogliaCoseno, ArrayList<Integer> sogliaDipendenze, String algorithm, GlobalTimer executionTime) {
         super(true);
-        timer = new GlobalTimer();
+        viewTime = new GlobalTimer();
+        this.executionTime = executionTime;
         smellName = new ArrayList<String>();
         smellName.add("Feature Envy");
         smellName.add("Misplaced Class");
@@ -123,7 +125,7 @@ public class CheckProjectPage extends DialogWrapper {
         setResizable(false);
         init();
         setTitle("CODE SMELL ANALYSIS");
-        timer.stopExecutionTimer();
+        executionTime.stopExecutionTime();
     }
 
     @Nullable
@@ -659,7 +661,7 @@ public class CheckProjectPage extends DialogWrapper {
         return new Action[]{extractAction, okAction, new DialogWrapperExitAction("EXIT", 0){
             @Override
             protected void doAction(ActionEvent e) {
-                timer.stopViewTimer();
+                viewTime.stopViewTime();
                 StatsCollection.getInstance().saveAll();
                 super.doAction(e);
             }
