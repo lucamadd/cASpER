@@ -1,8 +1,11 @@
 package it.unisa.casper.statistics;
 
+import com.opencsv.CSVWriter;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,6 +14,10 @@ public class StatsCollection {
 
     //Singleton pattern
     private static StatsCollection instance = null;
+
+    //cartella dove salvare le statistiche
+    private static final String STATS_DIRECTORY = System.getProperty("user.home") + File.separator +
+            ".casper" + File.separator + "statistics";
 
     private long viewTime;
     private long executionTime;
@@ -51,79 +58,77 @@ public class StatsCollection {
     }
 
 
-    public void saveAll() {
-        //creo la cartella statistics dove salvare i file
-        String nameDir = System.getProperty("user.home") + File.separator + ".casper" + File.separator + "statistics";
-        File dir = new File(nameDir);
+    //crea il file csv se non esiste
+    public void createCSV() throws IOException {
+
+        //crea la cartella statistics se non esiste
+        File dir = new File(STATS_DIRECTORY);
         dir.mkdir();
 
-        //formatto la data per il nome del file
+        FileWriter outputFile = new FileWriter(STATS_DIRECTORY + File.separator + "statistics.csv");
+
+        CSVWriter writer = new CSVWriter(outputFile);
+
+        //questa istruzione permette al file di ottimizzare la visualizzazione del file con MS Excel;
+        //imposta la virgola (,) come separatore, in modo che i dati in Excel appaiano in colonne separate
+        writer.writeNext(new String[] {"sep=,"});
+
+        // aggiungo gli header al csv
+        String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
+                "noSolutionBlobPage", "refactoring", "blobSmellNum", "misplacedClassSmellNum",
+                "promiscuousPackageSmellNum", "featureEnvySmellNum"};
+
+        /*  //questi header contengono anche i 3 smell aggiuntivi
+        String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
+                "noSolutionBlobPage", "noSolutionDivergentChangePage", "refactoring", "blobSmellNum",
+                "misplacedClassSmellNum", "divergentChangeSmellNum", "shotgunSurgerySmellNum",
+                "parallelInheritanceSmellNum", "promiscuousPackageSmellNum", "featureEnvySmellNum"};
+         */
+        writer.writeNext(header);
+
+
+        // chiudo il file
+        writer.close();
+    }
+
+    public void saveAll() throws IOException{
+
+        //crea il file csv se non esiste
+        System.out.println("TEST" + !new File(STATS_DIRECTORY + File.separator + "statistics.csv").isFile());
+        if (!new File(STATS_DIRECTORY + File.separator + "statistics.csv").isFile()){
+            createCSV();
+        }
+
+
+        //formatto la data per L'identificativo dell'esecuzione
         DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
         Date date = new Date();
-        String fileName = dateFormat.format(date);
+        String executionDate = dateFormat.format(date);
 
-        //creo il file di log
+        //aggiungo una riga al file
         try {
-            FileWriter f = new FileWriter(nameDir + File.separator + fileName + ".txt");
-            BufferedWriter out = new BufferedWriter(f);
-            //scrivo su file il view time
-            out.write("viewTime=" + viewTime);
-            out.flush();
-            out.newLine();
-            //scrivo su file il tempo di esecuzione
-            out.write("executionTime=" + executionTime);
-            out.flush();
-            out.newLine();
-            //scrivo su file il numero di volte in cui non sono state trovate soluzioni
-            out.write("noSolutionPromiscuousPackage=" + errorPromiscuousPackage);
-            out.flush();
-            out.newLine();
-            out.write("noSolutionBlobPage=" + errorBlobPage);
-            out.flush();
-            out.newLine();
-            /* //DIVERGENT CHANGE NOT INCLUDED IN FIRST 4 SMELLS
-            out.write("noSolutionDivergentChangePage=" + errorDivergentChangePage);
-            out.flush();
-            out.newLine();
+            FileWriter f = new FileWriter(STATS_DIRECTORY + File.separator + "statistics.csv", true);
+            CSVWriter writer = new CSVWriter(f);
+
+            String[] nextLine = {executionDate, String.valueOf(viewTime), String.valueOf(executionTime),
+                    String.valueOf(errorPromiscuousPackage), String.valueOf(errorBlobPage), (refactoring ? "1" : "0"),
+                    String.valueOf(blobSmellNum), String.valueOf(misplacedClassSmellNum),
+                    String.valueOf(promiscuousPackageSmellNum), String.valueOf(featureEnvySmellNum)};
+
+            /*   //queste righe contengono anche i 3 smell aggiuntivi
+            String[] nextLine = {executionDate, String.valueOf(viewTime), String.valueOf(executionTime),
+                    String.valueOf(errorPromiscuousPackage), String.valueOf(errorBlobPage), errorDivergentChangePage,
+                    (refactoring ? "1" : "0"), String.valueOf(blobSmellNum), String.valueOf(misplacedClassSmellNum),
+                    divergentChangeSmellNum, shotgunSurgerySmellNum, parallelInheritanceSmellNum,
+                    String.valueOf(promiscuousPackageSmellNum), String.valueOf(featureEnvySmellNum)};
              */
-            //scrivo su file se l'utente ha effettuato refactoring dopo l'analisi
-            if (refactoring){
-                out.write("refactoring=" + 1);
-                out.flush();
-                out.newLine();
-            } else {
-                out.write("refactoring=" + 0);
-                out.flush();
-                out.newLine();
-            }
-            //scrivo su file il numero di smell trovati per ogni tipologia
-            out.write("blobSmellNum=" + blobSmellNum);
-            out.flush();
-            out.newLine();
-            out.write("misplacedClassSmellNum=" + misplacedClassSmellNum);
-            out.flush();
-            out.newLine();
-            /*  //DIVERGENT CHANGE NOT INCLUDED IN FIRST 4 SMELLS
-            out.write("divergentChangeSmellNum=" + divergentChangeSmellNum);
-            out.flush();
-            out.newLine();
-             */
-            /*  //SHOTGUN SURGERY NOT INCLUDED IN FIRST 4 SMELLS
-            out.write("shotgunSurgerySmellNum=" + shotgunSurgerySmellNum);
-            out.flush();
-            out.newLine();
-             */
-            /*  //PARALLEL INHERITANCE NOT INCLUDED IN FIRST 4 SMELLS
-            out.write("parallelInheritanceSmellNum=" + parallelInheritanceSmellNum);
-            out.flush();
-            out.newLine();
-             */
-            out.write("promiscuousPackageSmellNum=" + promiscuousPackageSmellNum);
-            out.flush();
-            out.newLine();
-            out.write("featureEnvySmellNum=" + featureEnvySmellNum);
-            out.flush();
-            out.newLine();
+
+            writer.writeNext(nextLine);
+
+            writer.flush();
+
+
+            writer.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

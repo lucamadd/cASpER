@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47afe1f5-89a3-48a7-a848-fb15bcd093ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/BlobPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/BlobPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/BlobWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/BlobWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/DivergentChangePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/DivergentChangePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/DivergentChangeWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/DivergentChangeWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/FeatureEnvyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/FeatureEnvyPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/FeatureEnvyWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/FeatureEnvyWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/MisplacedClassPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/MisplacedClassPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/MisplacedClassWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/MisplacedClassWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ParallelInheritancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ParallelInheritancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ParallelInheritanceWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ParallelInheritanceWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/PromiscuousPackagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/PromiscuousPackagePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/PromiscuousPackageWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/PromiscuousPackageWizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ShotgunSurgeryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ShotgunSurgeryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ShothunSurgeryWizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/ShothunSurgeryWizard.java" afterDir="false" />
-    </list>
+    <list default="true" id="47afe1f5-89a3-48a7-a848-fb15bcd093ed" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,6 +276,7 @@
       <workItem from="1590652465189" duration="685000" />
       <workItem from="1590766309263" duration="59000" />
       <workItem from="1619702881171" duration="143000" />
+      <workItem from="1621519045200" duration="21000" />
     </task>
     <servers />
   </component>
@@ -331,10 +316,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1619096621945" />
-    <state x="361" y="74" key="#Project_Structure" timestamp="1619096210036">
+    <state x="361" y="74" key="#Project_Structure" timestamp="1621517290843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1619096210036" />
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1621517290843" />
     <state x="242" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619706766282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -351,6 +336,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1619364065949" />
+    <state x="628" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1621519616001">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="628" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1621519616001" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619886755370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -403,10 +392,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="150" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1619096629575" />
-    <state x="290" y="0" key="SettingsEditor" timestamp="1619871227839">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="278" y="0" key="SettingsEditor" timestamp="1621519626442">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="278" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1619706139222" />
+    <state x="278" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621519626442" />
     <state x="290" y="0" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1619871227839" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1619702882019">
       <screen x="0" y="0" width="1536" height="824" />
@@ -434,7 +423,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/CheckProjectPage.java</url>
-          <line>682</line>
+          <line>692</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

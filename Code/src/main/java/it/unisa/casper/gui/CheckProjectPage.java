@@ -29,6 +29,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -662,7 +663,12 @@ public class CheckProjectPage extends DialogWrapper {
             @Override
             protected void doAction(ActionEvent e) {
                 viewTime.stopViewTime();
-                StatsCollection.getInstance().saveAll();
+                try {
+                    StatsCollection.getInstance().saveAll();
+                } catch (IOException ex) {
+                    String message = "There was an error in stats generation.";
+                    Messages.showMessageDialog(message, "Warning", Messages.getWarningIcon());
+                }
                 super.doAction(e);
             }
         }};

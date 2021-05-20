@@ -49,7 +49,7 @@ public class ConfirmExtractionPage extends DialogWrapper {
             protected void doAction(ActionEvent actionEvent) {
                 StatsExtracter statsExtracter = new StatsExtracter();
                 try {
-                    statsExtracter.createCSV();
+                    //TODO statsExtracter.createCSV();
                     JOptionPane.showMessageDialog(centerPanel, "The .csv file was created successfully.");
                     dispose();
                 } catch (Exception e) {
