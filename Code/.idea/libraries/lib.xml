@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/opencsv-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/sqlite-jdbc-3.25.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/jsoup-1.11.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/commons-text-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/commons-lang3-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/jfreechart-1.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/lucene-core-7.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/casper-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/idea-sandbox/plugins/casper/lib/commons-beanutils-1.9.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

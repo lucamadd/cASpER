@@ -651,15 +651,7 @@ public class CheckProjectPage extends DialogWrapper {
                 }
             }
         };
-        Action extractAction = new DialogWrapperAction("STATISTICS") {
-
-            @Override
-            protected void doAction(ActionEvent actionEvent) {
-                ConfirmExtractionPage confirmExtractionPage = new ConfirmExtractionPage();
-                confirmExtractionPage.show();
-            }
-        };
-        return new Action[]{extractAction, okAction, new DialogWrapperExitAction("EXIT", 0){
+        return new Action[]{okAction, new DialogWrapperExitAction("EXIT", 0){
             @Override
             protected void doAction(ActionEvent e) {
                 viewTime.stopViewTime();

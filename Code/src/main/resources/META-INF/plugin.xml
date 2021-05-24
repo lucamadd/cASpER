@@ -28,6 +28,8 @@
                     text="Run plug-in"/>
             <action id="it.unisa.casper.actions.ConfigureAction" class="it.unisa.casper.actions.ConfigureAction"
                     text="Configure threshold"/>
+            <action id="it.unisa.casper.actions.StatsAction" class="it.unisa.casper.actions.StatsAction"
+                    text="View statistics"/>
         </group>
     </actions>
 

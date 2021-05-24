@@ -24,6 +24,7 @@
       <add-to-group group-id="ToolsMenu" anchor="first"/>
       <action id="it.unisa.casper.actions.BeginAction" class="it.unisa.casper.actions.BeginAction" text="Run plug-in"/>
       <action id="it.unisa.casper.actions.ConfigureAction" class="it.unisa.casper.actions.ConfigureAction" text="Configure threshold"/>
+      <action id="it.unisa.casper.actions.StatsAction" class="it.unisa.casper.actions.StatsAction" text="View statistics"/>
     </group>
   </actions>
   <application-components/>
