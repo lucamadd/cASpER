@@ -55,14 +55,9 @@ public class StatisticsTabPage extends DialogWrapper {
         table.repaint();
         //contentPanel.add(table);
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(2, 4));//layout pannello principale
+        bottomPanel.setLayout(new GridLayout(2, 3));//layout pannello principale
         PieSmellChart pieChart = new PieSmellChart(data);
         bottomPanel.add(pieChart.getPanel());
-        bottomPanel.add(new JPanel());
-        bottomPanel.add(new JPanel());
-        bottomPanel.add(new JPanel());
-        bottomPanel.add(new JPanel());
-        bottomPanel.add(new JPanel());
         bottomPanel.add(new JPanel());
         bottomPanel.add(new JPanel());
         contentPanel.add(bottomPanel);
@@ -95,7 +90,7 @@ public class StatisticsTabPage extends DialogWrapper {
     @NotNull
     @Override
     protected Action[] createActions() {
-        Action okAction = new DialogWrapperExitAction("APPLY", 1) {
+        Action okAction = new DialogWrapperExitAction("EXPORT .CSV", 1) {
             @Override
             protected void doAction(ActionEvent actionEvent) {
                 try {
