@@ -19,8 +19,6 @@ import java.io.IOException;
 
 public class StatisticsTabPage extends DialogWrapper {
     private JPanel contentPanel;
-    private JButton buttonOK;
-    private JButton buttonCancel;
     private JTable table;
 
     private String[][] data;
@@ -36,14 +34,12 @@ public class StatisticsTabPage extends DialogWrapper {
     @Nullable
     @Override
     protected JComponent createCenterPanel() {
-        //TODO OPEN FILE
         contentPanel = new JPanel(); //pannello principale
         contentPanel.setLayout(new BorderLayout(0, 0));
         contentPanel.setLayout(new GridLayout(3, 1));//layout pannello principale
-        JPanel topPanel = new JPanel();
-        topPanel.setLayout(new GridLayout(1, 2));
+
         JPanel tab = new JPanel();
-        tab.setLayout(new GridLayout(1, 1));
+        tab.setLayout(new BorderLayout());
         tab.setBorder(new TitledBorder("Stats table"));
 
         createTable();
@@ -88,9 +84,16 @@ public class StatisticsTabPage extends DialogWrapper {
         constraints.gridwidth = 2;
         constraints.anchor = GridBagConstraints.CENTER;
         configPanel.add(applyButton, constraints);
+        JSplitPane topPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
+                tab, configPanel);
+        topPanel.setOneTouchExpandable(true);
+        topPanel.setDividerLocation(0.2);
+        topPanel.setEnabled(false);
 
-        topPanel.add(tab);
-        topPanel.add(configPanel);
+        Dimension minimumSize = new Dimension(1000, 50);
+        Dimension minimumSizeConfig = new Dimension(50, 50);
+        tab.setMinimumSize(minimumSize);
+        configPanel.setMinimumSize(minimumSizeConfig);
         contentPanel.add(topPanel);
         table.repaint();
         //contentPanel.add(table);
