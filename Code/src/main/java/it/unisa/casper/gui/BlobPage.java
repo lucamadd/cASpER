@@ -172,6 +172,7 @@ public class BlobPage extends DialogWrapper {
                     StatsCollection.getInstance().addErrorBlobPage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
+                    StatsCollection.getInstance().setSolutionOKBlobPage();
                     if (splittedClasses.size() < 2) {
                         message = "Error during creation of solution";
                         Messages.showMessageDialog(message, "Error", Messages.getErrorIcon());

@@ -159,6 +159,7 @@ public class PromiscuousPackagePage extends DialogWrapper {
                     StatsCollection.getInstance().addErrorPromiscuousPackage();
                     Messages.showMessageDialog(message, "Oh!No!", Messages.getErrorIcon());
                 } else {
+                    StatsCollection.getInstance().setSolutionOKPromiscuousPackage();
                     if (splittedPackages.size() < 2) {
                         message = "Error during creation of solution";
                         Messages.showMessageDialog(message, "Error", Messages.getErrorIcon());

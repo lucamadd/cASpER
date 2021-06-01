@@ -10,56 +10,51 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 
-public class PieSmellChart {
+public class PieRefactorChart {
 
-    private String[][] data;
-
-    public PieSmellChart(String[][] data){
-        this.data = data;
-    }
 
     //restituisce un JPanel contenente il grafico
-    public JPanel getPanel(){
+    public JPanel getPanel(String[][] data){
         //creo il dataset
         final PieDataset dataset = createDataset(data);
         //creo il grafico
         final JFreeChart chart = createChart(dataset);
 
         final ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setBorder(new TitledBorder("Refactoring"));
         //chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
         return chartPanel;
     }
 
     private PieDataset createDataset(String[][] data) {
         final DefaultPieDataset dataset = new DefaultPieDataset();
-        int blob = 0;
-        int misplacedClass = 0;
-        int promiscuousPackage = 0;
-        int featureEnvy = 0;
+        int refactoringPerformed = 0;
+        int refactoringNotPerformed = 0;
         for (int i=0;i<data.length;i++){
-            blob += Integer.parseInt(data[i][6]);
-            misplacedClass += Integer.parseInt(data[i][7]);
-            promiscuousPackage += Integer.parseInt(data[i][8]);
-            featureEnvy += Integer.parseInt(data[i][9]);
+            if (data[i][5].equals("0")){
+                refactoringNotPerformed++;
+            } else {
+                refactoringPerformed++;
+            }
         }
-        dataset.setValue("Blob", blob);
-        dataset.setValue("Misplaced class", misplacedClass);
-        dataset.setValue("Promiscuous package", promiscuousPackage);
-        dataset.setValue("Feature envy", featureEnvy);
+        dataset.setValue("Refactoring performed", refactoringPerformed);
+        dataset.setValue("Refactoring not performed", refactoringNotPerformed);
         return dataset;
     }
 
     private JFreeChart createChart(final PieDataset dataset) {
         final JFreeChart chart = ChartFactory.createPieChart3D(
-                "Number of smells",  // chart title
+                "",  // chart title
                 dataset,             // dataset
                 true,                // include legend
                 true,
                 false
         );
         final PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setSectionOutlinesVisible(false);
         plot.setNoDataMessage("No data available");
         plot.setExplodePercent("One", 0.30);
 
@@ -68,17 +63,15 @@ public class PieSmellChart {
 
         //plot.setBackgroundPaint(Color.YELLOW);
 
-        //plot.setOutlinePaint(Color.RED);
+        plot.setOutlinePaint(new Color(0,0,0,0));
 
         plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0}--{1}--{2}"));
 
         plot.setLabelLinkStyle(PieLabelLinkStyle.STANDARD);
+        plot.setBackgroundPaint(new Color(0,0,0,0));
+        chart.setBackgroundPaint(new Color(255,255,255,180));
 
         chart.setBorderVisible(false);
-
-        //chart.setBorderPaint(Color.RED);
-
-        //chart.setBackgroundPaint(Color.YELLOW);
 
 
 

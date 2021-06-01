@@ -1,23 +1,21 @@
 package it.unisa.casper.gui;
 
+import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
-import it.unisa.casper.gui.charts.PieSmellChart;
+import it.unisa.casper.gui.charts.*;
 import it.unisa.casper.statistics.StatsExtracter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.general.PieDataset;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Vector;
 
 public class StatisticsTabPage extends DialogWrapper {
     private JPanel contentPanel;
@@ -41,9 +39,11 @@ public class StatisticsTabPage extends DialogWrapper {
         //TODO OPEN FILE
         contentPanel = new JPanel(); //pannello principale
         contentPanel.setLayout(new BorderLayout(0, 0));
-        contentPanel.setLayout(new GridLayout(0, 1));//layout pannello principale
+        contentPanel.setLayout(new GridLayout(3, 1));//layout pannello principale
+        JPanel topPanel = new JPanel();
+        topPanel.setLayout(new GridLayout(1, 2));
         JPanel tab = new JPanel();
-        tab.setLayout(new BorderLayout(0, 0));
+        tab.setLayout(new GridLayout(1, 1));
         tab.setBorder(new TitledBorder("Stats table"));
 
         createTable();
@@ -51,17 +51,114 @@ public class StatisticsTabPage extends DialogWrapper {
         JScrollPane scroll = new JScrollPane(table);
         tab.add(scroll, BorderLayout.CENTER);
 
-        contentPanel.add(tab);
+        JPanel configPanel = new JPanel();
+        configPanel.setLayout(new GridLayout(1, 1));
+        configPanel.setBorder(new TitledBorder("Config"));
+
+
+
+
+        JComboBox comboBox = new ComboBox();
+        comboBox.addItem("All (default)");
+        comboBox.addItem("Last usage");
+        comboBox.addItem("Last 5 usages");
+        comboBox.addItem("Last 10 usages");
+        comboBox.addItem("Last 20 usages");
+        comboBox.addItem("Last 50 usages");
+        comboBox.setSelectedIndex(0);
+
+
+        JButton applyButton = new JButton("APPLY");
+
+        configPanel.setLayout(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.anchor = GridBagConstraints.WEST;
+        constraints.insets = new Insets(10, 10, 10, 10);
+
+        // add components to the panel
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        configPanel.add(new JLabel("Filter"), constraints);
+
+        constraints.gridx = 1;
+        configPanel.add(comboBox, constraints);
+
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.gridwidth = 2;
+        constraints.anchor = GridBagConstraints.CENTER;
+        configPanel.add(applyButton, constraints);
+
+        topPanel.add(tab);
+        topPanel.add(configPanel);
+        contentPanel.add(topPanel);
         table.repaint();
         //contentPanel.add(table);
+        JPanel centerPanel = new JPanel();
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(2, 3));//layout pannello principale
-        PieSmellChart pieChart = new PieSmellChart(data);
-        bottomPanel.add(pieChart.getPanel());
-        bottomPanel.add(new JPanel());
-        bottomPanel.add(new JPanel());
+        centerPanel.setLayout(new GridLayout(1, 3));//layout pannello centrale
+        bottomPanel.setLayout(new GridLayout(1, 3));//layout pannello inferiore
+        try {
+            StackedBarSmellsChart stackedBarSmellsChart = new StackedBarSmellsChart();
+            centerPanel.add(stackedBarSmellsChart.getPanel(data));
+            BarTimeChart barViewTimeChart = new BarTimeChart();
+            centerPanel.add(barViewTimeChart.getPanel(true,data));
+            BarTimeChart barExecutionTimeChart = new BarTimeChart();
+            centerPanel.add(barExecutionTimeChart.getPanel(false,data));
+            PieRefactorChart pieRefactorChart = new PieRefactorChart();
+            bottomPanel.add(pieRefactorChart.getPanel(data));
+            RingNoSolutionChart ringNoSolutionChartBlob = new RingNoSolutionChart();
+            bottomPanel.add(ringNoSolutionChartBlob.getPanel(true,data));
+            RingNoSolutionChart ringNoSolutionChartPromiscuousPackage = new RingNoSolutionChart();
+            bottomPanel.add(ringNoSolutionChartPromiscuousPackage.getPanel(false,data));
+        } catch (Exception e){
+            //per catturare eccezioni nel caso in cui i dati siano malformati
+            e.printStackTrace();
+            Messages.showMessageDialog("Error fetching statistics.", "Error", Messages.getErrorIcon());
+        }
+        contentPanel.add(centerPanel);
         contentPanel.add(bottomPanel);
-        contentPanel.setPreferredSize(new Dimension(1250, 700));
+        contentPanel.setPreferredSize(new Dimension(1250, 900));
+
+
+        applyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                StatsExtracter extracter = new StatsExtracter();
+                try {
+                    data = extracter.readStatistics(comboBox.getSelectedIndex());
+                    System.out.println("COMBOBOX SELECTED: " + comboBox.getSelectedIndex());
+
+                    if (data != null){
+                        for (int i=0;i<data.length;i++){
+                            System.out.println("DATA EXTRACTED: " + data[i][0] + " "
+                                    + data[i][1] + " "+ data[i][2] + " "+ data[i][3] + " "
+                                    + data[i][4] + " ");
+                        }
+                        StackedBarSmellsChart stackedBarSmellsChart = new StackedBarSmellsChart();
+                        centerPanel.removeAll();
+                        centerPanel.add(stackedBarSmellsChart.getPanel(data));
+                        BarTimeChart barViewTimeChart = new BarTimeChart();
+                        centerPanel.add(barViewTimeChart.getPanel(true,data));
+                        BarTimeChart barExecutionTimeChart = new BarTimeChart();
+                        centerPanel.add(barExecutionTimeChart.getPanel(false,data));
+                        PieRefactorChart pieRefactorChart = new PieRefactorChart();
+                        bottomPanel.removeAll();
+                        bottomPanel.add(pieRefactorChart.getPanel(data));
+                        RingNoSolutionChart ringNoSolutionChartBlob = new RingNoSolutionChart();
+                        bottomPanel.add(ringNoSolutionChartBlob.getPanel(true,data));
+                        RingNoSolutionChart ringNoSolutionChartPromiscuousPackage = new RingNoSolutionChart();
+                        bottomPanel.add(ringNoSolutionChartPromiscuousPackage.getPanel(false,data));
+                    }
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    Messages.showMessageDialog("Error fetching statistics.", "Error", Messages.getErrorIcon());
+                }
+                centerPanel.revalidate();
+                centerPanel.repaint();
+            }
+        });
 
         return contentPanel;
 
@@ -75,14 +172,19 @@ public class StatisticsTabPage extends DialogWrapper {
         StatsExtracter extracter = new StatsExtracter();
         data = null;
         try {
-            data = extracter.readStatistics();
+            data = extracter.readStatistics(0);
         } catch (IOException e) {
             e.printStackTrace();
             Messages.showMessageDialog("Error fetching statistics.", "Error", Messages.getErrorIcon());
         }
 
-
-        DefaultTableModel model = new DefaultTableModel(data,header);
+        DefaultTableModel model = new DefaultTableModel(data,header){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
         table = new JTable(model);
     }
 
@@ -90,16 +192,17 @@ public class StatisticsTabPage extends DialogWrapper {
     @NotNull
     @Override
     protected Action[] createActions() {
-        Action okAction = new DialogWrapperExitAction("EXPORT .CSV", 1) {
+        Action okAction = new DialogWrapperAction("EXPORT .CSV") {
             @Override
             protected void doAction(ActionEvent actionEvent) {
                 try {
-
+                    //noinspection UnstableApiUsage
+                    com.intellij.ide.actions.ShowFilePathAction.openDirectory(new File(
+                            System.getProperty("user.home") + File.separator +
+                                    ".casper" + File.separator + "statistics"
+                    ));
                 } catch (Exception e) {
-                    Messages.showMessageDialog("Error during storing thresholds", "Error", Messages.getErrorIcon());
-                } finally {
-                    Messages.showMessageDialog("Configured thresholds", "Success", Messages.getInformationIcon());
-                    super.doAction(actionEvent);
+                    Messages.showMessageDialog("Error retrieving .csv file", "Error", Messages.getErrorIcon());
                 }
             }
         };

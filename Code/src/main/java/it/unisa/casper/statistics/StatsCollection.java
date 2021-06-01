@@ -22,9 +22,12 @@ public class StatsCollection {
     private long viewTime;
     private long executionTime;
 
-    private int errorDivergentChangePage = 0;
-    private int errorBlobPage = 0;
-    private int errorPromiscuousPackage = 0;
+    // -1: N/A
+    //  0: soluzione trovata, no errore
+    //  1: errore trovato
+    private int errorDivergentChangePage = -1;
+    private int errorBlobPage = -1;
+    private int errorPromiscuousPackage = -1;
 
     //variabile che salva se l'utente ha fatto o meno refactoring dopo l'analisi
     private boolean refactoring = false;
@@ -136,17 +139,23 @@ public class StatsCollection {
         resetAll();
     }
 
-    //incrementa il contatore di soluzioni non trovate per DivergentChangePage
     public void addErrorDivergentChangePage(){
-        errorDivergentChangePage += 1;
+        errorDivergentChangePage = 1;
     }
-    //incrementa il contatore di soluzioni non trovate per BlobPage
     public void addErrorBlobPage(){
-        errorBlobPage += 1;
+        errorBlobPage = 1;
     }
-    //incrementa il contatore di soluzioni non trovate per PromiscuousPackage
     public void addErrorPromiscuousPackage(){
-        errorPromiscuousPackage += 1;
+        errorPromiscuousPackage = 1;
+    }
+    public void setSolutionOKDivergentChangePage(){
+        errorDivergentChangePage = 0;
+    }
+    public void setSolutionOKBlobPage(){
+        errorBlobPage = 0;
+    }
+    public void setSolutionOKPromiscuousPackage(){
+        errorPromiscuousPackage = 0;
     }
 
     //imposta al valore di default le variabili interessate
