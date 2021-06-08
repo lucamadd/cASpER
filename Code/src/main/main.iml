@@ -10,5 +10,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="casper-1.0-SNAPSHOT1" level="project" />
     <orderEntry type="library" name="Gradle: org.jfree:jfreechart:1.5.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.opencsv:opencsv:4.1" level="project" />
   </component>
 </module>

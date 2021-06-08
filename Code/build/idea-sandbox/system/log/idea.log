@@ -9378,3 +9378,56 @@ Max     duration: 15ms (it was 'Run anything action update (class com.intellij.i
 2021-06-07 10:18:57,485 [3700402]   INFO - plication.impl.ApplicationImpl - Global instance threads created counter = 58; ProcessIOExecutorService threads: 6 
 2021-06-07 10:18:57,486 [3700403]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
 2021-06-07 10:18:57,489 [3700406]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2021-06-08 16:19:50,907 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2021-06-08 16:19:51,085 [    178]   INFO -        #com.intellij.idea.Main - IDE: IntelliJ IDEA (build #IC-193.5233.102, 28 Nov 2019 00:47) 
+2021-06-08 16:19:51,086 [    179]   INFO -        #com.intellij.idea.Main - OS: Windows 10 (10.0, amd64) 
+2021-06-08 16:19:51,087 [    180]   INFO -        #com.intellij.idea.Main - JRE: 11.0.4+10-b520.11 (JetBrains s.r.o) 
+2021-06-08 16:19:51,087 [    180]   INFO -        #com.intellij.idea.Main - JVM: 11.0.4+10-b520.11 (OpenJDK 64-Bit Server VM) 
+2021-06-08 16:19:51,087 [    180]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.classpath.index.enabled=false -Didea.config.path=C:\Users\Luca\Documents\GitHub\cASpER\Code\build\idea-sandbox\config -Didea.is.internal=true -Didea.platform.prefix=Idea -Didea.plugins.path=C:\Users\Luca\Documents\GitHub\cASpER\Code\build\idea-sandbox\plugins -Didea.required.plugins.id=it.unisa.casper -Didea.system.path=C:\Users\Luca\Documents\GitHub\cASpER\Code\build\idea-sandbox\system -Xms256m -Xmx512m -Dfile.encoding=windows-1252 -Duser.country=IT -Duser.language=it -Duser.variant -ea 
+2021-06-08 16:19:51,087 [    180]   INFO -        #com.intellij.idea.Main - charsets: JNU=Cp1252 file=windows-1252 
+2021-06-08 16:19:51,141 [    234]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 12; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@56537e09[Running, parallelism = 12, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@63736ea4 
+2021-06-08 16:19:51,358 [    451]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 370 ms 
+2021-06-08 16:19:51,456 [    549]   INFO - penapi.util.io.win32.IdeaWin32 - Native filesystem for Windows is operational 
+2021-06-08 16:19:51,705 [    798]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-groovy.xml 
+2021-06-08 16:19:51,707 [    800]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-detection-groovy.xml 
+2021-06-08 16:19:51,828 [    921]   INFO - llij.ide.plugins.PluginManager - Plugin "Java" misses optional descriptor profiler-java.xml 
+2021-06-08 16:19:51,974 [   1067]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: Android Support (10.3.5), Ant (193.5233.102), Bytecode Viewer (193.5233.102), ChangeReminder (193.5233.102), Configuration Script (193.5233.102), Copyright (193.5233.102), Coverage (193.5233.102), Eclipse Interoperability (193.5233.102), EditorConfig (193.5233.102), Git (193.5233.102), GitHub (193.5233.102), Gradle (193.5233.102), Gradle-Java (193.5233.102), Gradle-Maven (193.5233.102), Groovy (193.5233.102), IDEA CORE (193.5233.102), IntelliLang (193.5233.102), JUnit (193.5233.102), Java (193.5233.102), Java Bytecode Decompiler (193.5233.102), Java IDE Customization (193.5233.102), Java Internationalization (193.5233.102), Java Stream Debugger (193.5233.102), JavaFX (193.5233.102), Kotlin (1.3.60-release-IJ2019.3-1), Machine Learning Code Completion (193.5233.102), Markdown (193.5233.102), Maven (193.5233.102), Mercurial (193.5233.102), Plugin DevKit (193.5233.102), Properties (193.5233.102), Settings Repository (193.5233.102), Shell Script (193.5233.102), Smali Support (193.5233.102), Subversion (193.5233.102), Task Management (193.5233.102), Terminal (193.5233.102), TestNG (193.5233.102), TextMate bundles (193.5233.102), UI Designer (193.5233.102), XPathView + XSLT (193.5233.102), XSLT Debugger (193.5233.102), YAML (193.5233.102) 
+2021-06-08 16:19:51,975 [   1068]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: cASpER (1.1.2) 
+2021-06-08 16:19:52,693 [   1786]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=492; buffer=10; max=492 
+2021-06-08 16:19:52,771 [   1864]   INFO - com.intellij.util.ui.JBUIScale - System scale factor: 1.0 (IDE-managed HiDPI) 
+2021-06-08 16:19:52,791 [   1884]   INFO - pi.util.registry.RegistryState - Registry values changed by user: java.completion.argument.hints.internal = false 
+2021-06-08 16:19:52,792 [   1885]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2021-06-08 16:19:52,799 [   1892]   INFO - pi.util.registry.RegistryState - Experimental features enabled for user: wsl.close.process.input, wsl.p9.support, wsl.p9.show.roots.in.file.chooser, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, copy.reference.popup, new.large.text.file.viewer, property.value.inplace.editing 
+2021-06-08 16:19:52,876 [   1969]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is disabled 
+2021-06-08 16:19:52,920 [   2013]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2021-06-08 16:19:53,540 [   2633]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting 
+2021-06-08 16:19:53,658 [   2751]   INFO - pl$FileIndexDataInitialization - Initialization done: 971 
+2021-06-08 16:19:53,928 [   3021]   INFO - exImpl$StubIndexInitialization - Initialization done: 270 
+2021-06-08 16:19:55,189 [   4282]   INFO - CompilerWorkspaceConfiguration - Available processors: 12 
+2021-06-08 16:19:57,406 [   6499]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=13, fontScale=1.0; restored: fontSize=13, fontScale=1.0 
+2021-06-08 16:20:02,110 [  11203]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2021-06-08 16:20:02,116 [  11209]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2021-06-08 16:20:02,117 [  11210]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2021-06-08 16:20:04,318 [  13411]   INFO - Types.impl.FileTypeManagerImpl - 0 auto-detected files. Detection took 0 ms 
+2021-06-08 16:20:04,318 [  13411]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2021-06-08 16:20:04,354 [  13447]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2021-06-08 16:20:04,354 [  13447]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2021-06-08 16:20:04,357 [  13450]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2021-06-08 16:20:04,602 [  13695]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2021-06-08 16:20:04,602 [  13695]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2021-06-08 16:20:04,602 [  13695]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2021-06-08 16:20:04,604 [  13697]   INFO - plication.impl.ApplicationImpl - Write action Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2021-06-08 16:20:04,604 [  13697]   INFO - plication.impl.ApplicationImpl - AnAction.update() Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2021-06-08 16:20:04,604 [  13697]   INFO - plication.impl.ApplicationImpl - Global instance threads created counter = 14; ProcessIOExecutorService threads: 0 
+2021-06-08 16:20:04,605 [  13698]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2021-06-08 16:20:04,607 [  13700]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
