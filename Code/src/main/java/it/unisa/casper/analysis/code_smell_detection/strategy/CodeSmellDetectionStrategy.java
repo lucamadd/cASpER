@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Interfaccia che dichiara i metodi da implementare negli Strategy
  */
-public interface CodeSmellDetectionStrategy<T> {
+public interface    CodeSmellDetectionStrategy<T> {
 
     /**
      * metodo che analizza un component per verificare se è affetto da smell

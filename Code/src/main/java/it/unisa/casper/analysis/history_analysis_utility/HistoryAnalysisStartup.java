@@ -1,9 +1,6 @@
 package it.unisa.casper.analysis.history_analysis_utility;
 
 import it.unisa.casper.analysis.code_smell.CodeSmell;
-import it.unisa.casper.analysis.code_smell.FeatureEnvyCodeSmell;
-import it.unisa.casper.storage.beans.ClassBean;
-import org.apache.xmlbeans.impl.xb.ltgfmt.Code;
 
 import java.io.BufferedWriter;
 import java.io.File;

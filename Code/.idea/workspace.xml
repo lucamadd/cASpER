@@ -9,20 +9,59 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/actions/SystemStart.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/actions/SystemStart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/CheckProjectPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/gui/StatisticsTabPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/parser/PsiParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/parser/PsiParser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/parser/PsiParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main-instrumented/it/unisa/casper/parser/PsiParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/actions/SystemStart.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/actions/SystemStart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/CheckProjectPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/gui/StatisticsTabPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/parser/PsiParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/parser/PsiParser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/parser/PsiParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/it/unisa/casper/parser/PsiParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/idea-sandbox/config/options/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/config/options/other.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/idea-sandbox/config/options/recentProjects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/config/options/recentProjects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/system/index/stubs/Stubs.storage_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/idea-sandbox/system/log/idea.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/idea-sandbox/system/log/idea.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/casper-1.1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/casper-1.1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/actions/SystemStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/actions/SystemStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/analysis/code_smell_detection/strategy/CodeSmellDetectionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/analysis/code_smell_detection/strategy/CodeSmellDetectionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/analysis/history_analysis_utility/HistoryAnalysisStartup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/CheckProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/CheckProjectPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/StatisticsTabPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/gui/StatisticsTabPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unisa/casper/parser/PsiParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unisa/casper/parser/PsiParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,34 +144,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/164.-900.1600.860@0.0.1536.824" timestamp="1621691705022" />
-    <state width="746" height="261" key="GridCell.Tab.0.bottom" timestamp="1622577111461">
-      <screen x="164" y="-900" width="1600" height="860" />
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom" timestamp="1623053939998">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824/164.-900.1600.860@0.0.1536.824" timestamp="1622575007213" />
     <state width="746" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/164.-900.1600.860@164.-900.1600.860" timestamp="1622577111461" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622212994708" />
-    <state width="777" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622402500699" />
-    <state width="746" height="261" key="GridCell.Tab.0.center" timestamp="1622577111460">
-      <screen x="164" y="-900" width="1600" height="860" />
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623053939998" />
+    <state width="1557" height="208" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1622579526778" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center" timestamp="1623053939998">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824/164.-900.1600.860@0.0.1536.824" timestamp="1622575007208" />
     <state width="746" height="261" key="GridCell.Tab.0.center/0.0.1536.824/164.-900.1600.860@164.-900.1600.860" timestamp="1622577111460" />
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622212994707" />
-    <state width="777" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622402500699" />
-    <state width="746" height="261" key="GridCell.Tab.0.left" timestamp="1622577111460">
-      <screen x="164" y="-900" width="1600" height="860" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623053939998" />
+    <state width="1557" height="208" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1622579526778" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left" timestamp="1623053939998">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824/164.-900.1600.860@0.0.1536.824" timestamp="1622575007205" />
     <state width="746" height="261" key="GridCell.Tab.0.left/0.0.1536.824/164.-900.1600.860@164.-900.1600.860" timestamp="1622577111460" />
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622212994706" />
-    <state width="777" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622402500699" />
-    <state width="746" height="261" key="GridCell.Tab.0.right" timestamp="1622577111461">
-      <screen x="164" y="-900" width="1600" height="860" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623053939998" />
+    <state width="1557" height="208" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1622579526778" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right" timestamp="1623053939998">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824/164.-900.1600.860@0.0.1536.824" timestamp="1622575007212" />
     <state width="746" height="261" key="GridCell.Tab.0.right/0.0.1536.824/164.-900.1600.860@164.-900.1600.860" timestamp="1622577111461" />
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622212994707" />
-    <state width="777" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622402500699" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623053939998" />
+    <state width="1557" height="208" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1622579526778" />
     <state width="746" height="261" key="GridCell.Tab.1.bottom" timestamp="1622577111462">
       <screen x="164" y="-900" width="1600" height="860" />
     </state>

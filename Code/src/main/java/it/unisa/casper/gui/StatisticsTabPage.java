@@ -9,7 +9,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -130,14 +129,8 @@ public class StatisticsTabPage extends DialogWrapper {
                 StatsExtracter extracter = new StatsExtracter();
                 try {
                     data = extracter.readStatistics(comboBox.getSelectedIndex());
-                    System.out.println("COMBOBOX SELECTED: " + comboBox.getSelectedIndex());
 
                     if (data != null){
-                        for (int i=0;i<data.length;i++){
-                            System.out.println("DATA EXTRACTED: " + data[i][0] + " "
-                                    + data[i][1] + " "+ data[i][2] + " "+ data[i][3] + " "
-                                    + data[i][4] + " ");
-                        }
                         StackedBarSmellsChart stackedBarSmellsChart = new StackedBarSmellsChart();
                         centerPanel.removeAll();
                         centerPanel.add(stackedBarSmellsChart.getPanel(data));

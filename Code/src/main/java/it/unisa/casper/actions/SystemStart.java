@@ -5,14 +5,10 @@ import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import it.unisa.casper.analysis.history_analysis_utility.HistoryAnalysisStartup;
-import it.unisa.casper.analysis.history_analysis_utility.PythonExeSingleton;
 import it.unisa.casper.gui.CheckProjectPage;
 import it.unisa.casper.parser.ParsingException;
 import it.unisa.casper.parser.PsiParser;
 import it.unisa.casper.statistics.GlobalTimer;
-import it.unisa.casper.storage.beans.ClassBean;
-import it.unisa.casper.storage.beans.MethodBean;
 import it.unisa.casper.storage.beans.PackageBean;
 
 import java.io.*;
