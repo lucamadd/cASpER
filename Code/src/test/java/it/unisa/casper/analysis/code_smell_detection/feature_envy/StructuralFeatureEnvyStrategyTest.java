@@ -1,6 +1,6 @@
-package it.casper.analysis.code_smell_detection.feature_envy;
+package it.unisa.casper.analysis.code_smell_detection.feature_envy;
 
-import it.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
+import it.unisa.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
 import it.unisa.casper.analysis.code_smell.FeatureEnvyCodeSmell;
 import it.unisa.casper.analysis.code_smell_detection.feature_envy.StructuralFeatureEnvyStrategy;
 import it.unisa.casper.storage.beans.*;

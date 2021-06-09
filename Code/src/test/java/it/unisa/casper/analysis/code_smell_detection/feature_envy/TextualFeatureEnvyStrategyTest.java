@@ -1,7 +1,7 @@
-package it.casper.analysis.code_smell_detection.feature_envy;
+package it.unisa.casper.analysis.code_smell_detection.feature_envy;
 
 import it.unisa.casper.analysis.code_smell.FeatureEnvyCodeSmell;
-import it.casper.analysis.code_smell_detection.Helper.CosineSimilarityStub;
+import it.unisa.casper.analysis.code_smell_detection.Helper.CosineSimilarityStub;
 import it.unisa.casper.analysis.code_smell_detection.feature_envy.TextualFeatureEnvyStrategy;
 import it.unisa.casper.storage.beans.*;
 import org.junit.Before;

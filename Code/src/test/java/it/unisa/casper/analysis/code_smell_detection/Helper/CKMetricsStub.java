@@ -1,4 +1,4 @@
-package it.casper.analysis.code_smell_detection.Helper;
+package it.unisa.casper.analysis.code_smell_detection.Helper;
 
 import it.unisa.casper.storage.beans.ClassBean;
 import it.unisa.casper.storage.beans.MethodBean;

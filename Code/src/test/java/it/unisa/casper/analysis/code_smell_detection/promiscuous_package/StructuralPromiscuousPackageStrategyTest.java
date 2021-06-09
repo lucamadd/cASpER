@@ -1,7 +1,7 @@
-package it.casper.analysis.code_smell_detection.promiscuous_package;
+package it.unisa.casper.analysis.code_smell_detection.promiscuous_package;
 
 import it.unisa.casper.analysis.code_smell.PromiscuousPackageCodeSmell;
-import it.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
+import it.unisa.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
 import it.unisa.casper.analysis.code_smell_detection.promiscuous_package.StructuralPromiscuousPackageStrategy;
 import it.unisa.casper.storage.beans.*;
 import org.junit.Before;

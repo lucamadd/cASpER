@@ -2,7 +2,6 @@ package it.unisa.casper.analysis.code_smell;
 
 import it.unisa.casper.analysis.code_smell_detection.strategy.CodeSmellDetectionStrategy;
 import it.unisa.casper.storage.beans.ClassBean;
-import org.apache.xmlbeans.impl.xb.ltgfmt.Code;
 import org.junit.Before;
 import org.junit.Test;
 

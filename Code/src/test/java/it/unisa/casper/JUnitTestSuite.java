@@ -1,16 +1,16 @@
 package it.unisa.casper;
 
-import it.casper.analysis.code_smell_detection.BeanDetectionTest;
-import it.casper.analysis.code_smell_detection.blob.StructuralBlobStrategyTest;
-import it.casper.analysis.code_smell_detection.blob.TextualBlobStrategyTest;
-import it.casper.analysis.code_smell_detection.feature_envy.TextualFeatureEnvyStrategyTest;
-import it.casper.analysis.code_smell_detection.misplaced_class.StructuralMisplacedClassStrategyTest;
-import it.casper.analysis.code_smell_detection.misplaced_class.TextualMisplacedClassStrategyTest;
-import it.casper.analysis.code_smell_detection.promiscuous_package.StructuralPromiscuousPackageStrategyTest;
-import it.casper.analysis.code_smell_detection.promiscuous_package.TextualPromiscuousPackageStrategyTest;
-import it.casper.refactor.SplitPackagesTest;
-import it.casper.analysis.code_smell_detection.feature_envy.StructuralFeatureEnvyStrategyTest;
-import it.casper.refactor.SplitClassTest;
+import it.unisa.casper.analysis.code_smell_detection.BeanDetectionTest;
+import it.unisa.casper.analysis.code_smell_detection.blob.StructuralBlobStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.blob.TextualBlobStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.feature_envy.TextualFeatureEnvyStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.misplaced_class.StructuralMisplacedClassStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.misplaced_class.TextualMisplacedClassStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.promiscuous_package.StructuralPromiscuousPackageStrategyTest;
+import it.unisa.casper.analysis.code_smell_detection.promiscuous_package.TextualPromiscuousPackageStrategyTest;
+import it.unisa.casper.refactor.SplitPackagesTest;
+import it.unisa.casper.analysis.code_smell_detection.feature_envy.StructuralFeatureEnvyStrategyTest;
+import it.unisa.casper.refactor.SplitClassTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

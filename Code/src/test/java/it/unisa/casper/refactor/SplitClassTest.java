@@ -1,4 +1,4 @@
-package it.casper.refactor;
+package it.unisa.casper.refactor;
 
 import it.unisa.casper.refactor.splitting_algorithm.SplitClasses;
 import it.unisa.casper.storage.beans.*;

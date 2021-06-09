@@ -1,7 +1,7 @@
-package it.casper.analysis.code_smell_detection.blob;
+package it.unisa.casper.analysis.code_smell_detection.blob;
 
 import it.unisa.casper.analysis.code_smell.BlobCodeSmell;
-import it.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
+import it.unisa.casper.analysis.code_smell_detection.Helper.CKMetricsStub;
 import it.unisa.casper.analysis.code_smell_detection.blob.StructuralBlobStrategy;
 import it.unisa.casper.storage.beans.*;
 import org.junit.Before;

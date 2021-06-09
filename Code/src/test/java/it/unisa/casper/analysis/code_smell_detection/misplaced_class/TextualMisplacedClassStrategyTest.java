@@ -1,7 +1,7 @@
-package it.casper.analysis.code_smell_detection.misplaced_class;
+package it.unisa.casper.analysis.code_smell_detection.misplaced_class;
 
 import it.unisa.casper.analysis.code_smell.MisplacedClassCodeSmell;
-import it.casper.analysis.code_smell_detection.Helper.CosineSimilarityStub;
+import it.unisa.casper.analysis.code_smell_detection.Helper.CosineSimilarityStub;
 import it.unisa.casper.analysis.code_smell_detection.misplaced_class.TextualMisplacedClassStrategy;
 import it.unisa.casper.storage.beans.*;
 import org.junit.Before;

@@ -1,6 +1,5 @@
-package it.casper.analysis.code_smell_detection;
+package it.unisa.casper.analysis.code_smell_detection;
 
-import it.unisa.casper.analysis.code_smell_detection.BeanDetection;
 import it.unisa.casper.storage.beans.*;
 import org.junit.Before;
 import org.junit.Test;
