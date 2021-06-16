@@ -23,3 +23,16 @@ If not present, it is also necessary to define the startup configuration to comp
 
   1. :runIde in the "task" chapter
   2. -stacktrace in the "arguments" field
+
+## How to see statistics
+
+You can see the following statistics about cASpER usage:
+  - Number of code smells
+  - View time
+  - Execution time
+  - How many times refactoring is made
+  - How many times solutions were found for Blob smell and Promiscuous Package smell
+
+Statistics section will appear in the drop-down menu of the tools.
+
+![screen](https://user-images.githubusercontent.com/44671856/122235452-ffc25a00-cebd-11eb-92f8-d683d8b22a75.png)
