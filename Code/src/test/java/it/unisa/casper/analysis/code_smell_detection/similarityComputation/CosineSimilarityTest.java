@@ -1,7 +1,10 @@
 package it.unisa.casper.analysis.code_smell_detection.similarityComputation;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +19,9 @@ public class CosineSimilarityTest {
 
     private CosineSimilarity cosineSimilarityMock;
     private CosineSimilarity cosineSimilarity;
+
+    @Rule
+    public TemporaryFolder folder = new TemporaryFolder();
 
     @Before
     public void setUp() {
@@ -35,6 +41,15 @@ public class CosineSimilarityTest {
         }
     }
 
-    
-
+    @Test
+    public void readFileTest(){
+        try {
+            File tempFile = folder.newFile("test.txt");
+            FileUtils.writeStringToFile(tempFile, "hello world");
+            String result = CosineSimilarity.readFile(tempFile.getPath());
+            assertEquals("hello world", result);
+        } catch (IOException e) {
+            fail("Unexpected IOException");
+        }
+    }
 }
