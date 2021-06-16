@@ -33,6 +33,6 @@ You can see the following statistics about cASpER usage:
   - How many times refactoring is made
   - How many times solutions were found for Blob smell and Promiscuous Package smell
 
-Statistics section will appear in the drop-down menu of the tools.
+Statistics section will appear in the drop-down menu of the tools. You can also export a .csv file with all statistics.
 
 ![screen](https://user-images.githubusercontent.com/44671856/122235452-ffc25a00-cebd-11eb-92f8-d683d8b22a75.png)
