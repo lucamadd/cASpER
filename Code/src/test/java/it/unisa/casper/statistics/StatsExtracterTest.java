@@ -38,7 +38,7 @@ public class StatsExtracterTest {
             doThrow(new Exception()).when(statsExtracter).readStatistics(-1);
             statsExtracter.readStatistics(-1);
             fail("Unexpected Exception");
-        } catch (IOException e) {
+        } catch (Exception e) {
             //se arriva qui il test è passato
         }
     }
