@@ -33,6 +33,12 @@ You can see the following statistics about cASpER usage:
   - How many times refactoring is made
   - How many times solutions were found for Blob smell and Promiscuous Package smell
 
-Statistics section will appear in the drop-down menu of the tools. You can also export a .csv file with all statistics.
+Statistics section will appear in the drop-down menu of the tools. You can also export a .csv file with all gathered statistics.
 
 ![screen](https://user-images.githubusercontent.com/44671856/122235452-ffc25a00-cebd-11eb-92f8-d683d8b22a75.png)
+
+
+## How to run tests
+
+IntelliJ IDEA allows to run tests simply from the test suite class. To run tests for cASpER, open ```JUnitTestSuite.java``` in
+the editor and click on the green "play" button.
