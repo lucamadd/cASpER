@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.intellij' version '0.4.9'
+    id 'jacoco'
 }
 
 group 'it.unisa'
