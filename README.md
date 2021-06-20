@@ -33,6 +33,18 @@ You can see the following statistics about cASpER usage:
   - How many times refactoring is made
   - How many times solutions were found for Blob smell and Promiscuous Package smell
 
-Statistics section will appear in the drop-down menu of the tools. You can also export a .csv file with all statistics.
+Statistics section will appear in the drop-down menu of the tools. You can also export a .csv file with all gathered statistics.
 
 ![screen](https://user-images.githubusercontent.com/44671856/122235452-ffc25a00-cebd-11eb-92f8-d683d8b22a75.png)
+
+
+## How to run tests
+
+IntelliJ IDEA allows to run tests simply from the test suite class. To run tests for cASpER, open ```JUnitTestSuite.java``` in
+the editor, click on the right side of the class declaration and then click on _Run 'JUnitTestSuite'_.
+If you want to see code coverage you have to edit your configuration first. On the top right side of the menu bar, near the _Build_ button,
+click on _Edit configurations..._ and then in the _Code Coverage_ tab select JaCoCo as coverage runner.
+
+To run tests with coverage, just click on the right side of the class declaration and then click on _Run 'JUnitTestSuite' with Coverage_.
+
+![screen2](https://user-images.githubusercontent.com/44671856/122657790-df68f880-d166-11eb-824b-bbdb94559308.png)
