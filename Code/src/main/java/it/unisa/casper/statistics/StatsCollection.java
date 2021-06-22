@@ -63,44 +63,42 @@ public class StatsCollection {
 
     //crea il file csv se non esiste
     public void createCSV() throws IOException {
+        if (!new File(STATS_DIRECTORY + File.separator + "statistics.csv").isFile()){
+            //crea la cartella statistics se non esiste
+            File dir = new File(STATS_DIRECTORY);
+            dir.mkdir();
 
-        //crea la cartella statistics se non esiste
-        File dir = new File(STATS_DIRECTORY);
-        dir.mkdir();
+            FileWriter outputFile = new FileWriter(STATS_DIRECTORY + File.separator + "statistics.csv");
 
-        FileWriter outputFile = new FileWriter(STATS_DIRECTORY + File.separator + "statistics.csv");
+            CSVWriter writer = new CSVWriter(outputFile);
 
-        CSVWriter writer = new CSVWriter(outputFile);
+            //questa istruzione permette al file di ottimizzare la visualizzazione del file con MS Excel;
+            //imposta la virgola (,) come separatore, in modo che i dati in Excel appaiano in colonne separate
+            writer.writeNext(new String[] {"sep=,"});
 
-        //questa istruzione permette al file di ottimizzare la visualizzazione del file con MS Excel;
-        //imposta la virgola (,) come separatore, in modo che i dati in Excel appaiano in colonne separate
-        writer.writeNext(new String[] {"sep=,"});
+            // aggiungo gli header al csv
+            String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
+                    "noSolutionBlobPage", "refactoring", "blobSmellNum", "misplacedClassSmellNum",
+                    "promiscuousPackageSmellNum", "featureEnvySmellNum"};
 
-        // aggiungo gli header al csv
-        String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
-                "noSolutionBlobPage", "refactoring", "blobSmellNum", "misplacedClassSmellNum",
-                "promiscuousPackageSmellNum", "featureEnvySmellNum"};
-
-        /*  //questi header contengono anche i 3 smell aggiuntivi
-        String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
-                "noSolutionBlobPage", "noSolutionDivergentChangePage", "refactoring", "blobSmellNum",
-                "misplacedClassSmellNum", "divergentChangeSmellNum", "shotgunSurgerySmellNum",
-                "parallelInheritanceSmellNum", "promiscuousPackageSmellNum", "featureEnvySmellNum"};
-         */
-        writer.writeNext(header);
+            /*  //questi header contengono anche i 3 smell aggiuntivi
+            String[] header = { "executionDate","viewTime", "executionTime", "noSolutionPromiscuousPackage",
+                    "noSolutionBlobPage", "noSolutionDivergentChangePage", "refactoring", "blobSmellNum",
+                    "misplacedClassSmellNum", "divergentChangeSmellNum", "shotgunSurgerySmellNum",
+                    "parallelInheritanceSmellNum", "promiscuousPackageSmellNum", "featureEnvySmellNum"};
+             */
+                writer.writeNext(header);
 
 
-        // chiudo il file
-        writer.close();
+            // chiudo il file
+            writer.close();
+        }
     }
 
     public void saveAll() throws IOException{
 
         //crea il file csv se non esiste
-        System.out.println("TEST" + !new File(STATS_DIRECTORY + File.separator + "statistics.csv").isFile());
-        if (!new File(STATS_DIRECTORY + File.separator + "statistics.csv").isFile()){
-            createCSV();
-        }
+        createCSV();
 
 
         //formatto la data per L'identificativo dell'esecuzione
